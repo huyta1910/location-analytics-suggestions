@@ -1,4 +1,4 @@
-version: '3.8'
+
 
 services:
   mongodb:
@@ -27,11 +27,13 @@ services:
       - location_network
   
   # --- CORRECTED TABIX SERVICE ---
-  houseops:
-    image: houseops/houseops
-    container_name: houseops_ui
+  cloudbeaver:
+    image: dbeaver/cloudbeaver:latest
+    container_name: cloudbeaver_ui
     ports:
-      - "8082:8080" # Access HouseOps on localhost:8082
+      - "8978:8978"
+    volumes:
+      - cloudbeaver-data:/opt/cloudbeaver/workspace
     depends_on:
       - clickhouse
     networks:
@@ -116,3 +118,4 @@ networks:
 
 volumes:
   mongo-data:
+  cloudbeaver-data:
