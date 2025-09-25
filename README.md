@@ -1,15 +1,43 @@
 # Location Analytics Suggestions
 
+## Tech Stack
+
+<p>
+   <img src="https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white" />
+   <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" />
+   <img src="https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white" />
+   <img src="https://img.shields.io/badge/ClickHouse-FFDD00?logo=clickhouse&logoColor=black" />
+   <img src="https://img.shields.io/badge/Apache%20Airflow-017CEE?logo=apache-airflow&logoColor=white" />
+   <img src="https://img.shields.io/badge/dbt-FF694B?logo=dbt&logoColor=white" />
+   <img src="https://img.shields.io/badge/Metabase-509EE3?logo=metabase&logoColor=white" />
+   <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white" />
+</p>
+
 ## Project Overview
 
 This project helps brands identify potential locations to open new branches by analyzing and visualizing data from various sources. It combines web crawling, data pipelines, and analytics tools to provide actionable insights for expansion decisions.
 
 ## Features
 - **Web Crawling:** Collects data about restaurants, bars, and entertainment venues from Google Maps using Node.js and Puppeteer.
-- **Data Pipeline:** Extracts, transforms, and loads location data into MongoDB and ClickHouse for fast analytics.
+- **Data Pipeline:** Extracts, Load location data into MongoDB and ClickHouse for fast analytics, Transform with dbt.
 - **Analytics & Visualization:** Integrates with tools like Metabase and CloudBeaver for data exploration and hotspot suggestions.
-- **Airflow Integration:** Orchestrates ETL workflows for automated data updates.
+- **Airflow Integration:** Orchestrates ELT workflows for automated data updates.
 - **DBT Support:** Enables advanced data modeling and transformation for analytics.
+
+
+## Workflow
+
+```mermaid
+graph TD
+   A[Node.js Crawler] --> B[MongoDB (Raw Data)]
+   B --> C[1. Airflow triggers EL Script (Python)]
+   C --> D[2. Raw data loaded into ClickHouse (Staging Area)]
+   D --> E[3. Airflow triggers dbt]
+   E --> F[dbt transforms data within ClickHouse (Cleaned Models)]
+   F --> G[4. dbt creates final hotspots table in ClickHouse (Analytical Model)]
+   G --> H[5. Metabase reads from ClickHouse]
+   H --> I[Interactive Dashboard & Map]
+```
 
 ## Use Case
 If your brand wants to open a new branch, this project helps you:
@@ -65,4 +93,4 @@ location-analytics-suggestions/
 MIT
 
 ## Author
-huyta
+[huyta1910](https://github.com/huyta1910)
