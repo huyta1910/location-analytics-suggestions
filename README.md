@@ -93,4 +93,4 @@ location-analytics-suggestions/
 MIT
 
 ## Author
-[huyta1910](https://github.com/huyta1910)
+[Huy Ta Quang](https://github.com/huyta1910)
