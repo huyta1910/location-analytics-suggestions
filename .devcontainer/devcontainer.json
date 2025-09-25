@@ -1,0 +1,30 @@
+{
+    "name": "dbt & Airflow Dev Container",
+
+    // This tells the Dev Container to use your existing docker-compose setup.
+    "dockerComposeFile": "../docker-compose.yaml",
+
+    // This is the name of the service from docker-compose.yaml we want to attach to.
+    // airflow-webserver is a great choice as it's always running and has all tools.
+    "service": "airflow-webserver",
+
+    // This is the path to your project folder inside the container.
+    "workspaceFolder": "/opt/airflow",
+
+    // This section ensures the right VS Code extensions are installed inside the container.
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python", // Recommended for any Python work
+                "innoverio.vscode-dbt-power-user", // The dbt extension
+                "ms-vscode-remote.remote-containers" // The Dev Container extension itself
+            ]
+        }
+    },
+
+    // Run this command after the container is created to ensure correct ownership of files.
+    "postCreateCommand": "sudo chown -R airflow:airflow .",
+
+    // Tell VS Code to run as the 'airflow' user, not root.
+    "remoteUser": "airflow"
+}

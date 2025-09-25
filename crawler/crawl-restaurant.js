@@ -66,7 +66,7 @@ const keywords = [
 
 
 const conStr = "mongodb://127.0.0.1:27017/";
-const dbName = "crawl_restaurant_drink_beer";
+const dbName = "crawl_restaurant";
 const collectionName = "location";
 const restaurantCollectionName = "restaurant_drink_beer";
 
@@ -126,13 +126,13 @@ const crawl_restaurant_drink_beer = async (key, loc) => {
   await page.goto(url, { waitUntil: "networkidle2" });
 
   await page.waitForSelector('div[role="feed"]');
-  console.log("Đang tải danh sách địa điểm...");
+  console.log("Loading the list of locations...");
 
   await sleep(2000);
 
   const scrollContainer = await page.$('div[role="feed"]');
   for (let i = 1; i <= 10; i++) {
-    console.log(`Cuộn lần ${i}...`);
+    console.log(`Scrolling ${i}...`);
     await page.evaluate((sc) => sc.scrollBy(0, 2000), scrollContainer);
     await sleep(2000);
   }

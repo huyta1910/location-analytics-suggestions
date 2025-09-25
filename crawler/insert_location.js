@@ -11,11 +11,29 @@ db.location.insertMany([
     "city": "Hồ Chí Minh"
   },
   {
+    "ward": "Phạm Hùng",
+    "district": "Quận 8",
+    "city": "Hồ Chí Minh"
+  },
+  {
     "ward":"Nguyễn Thị Thập",
     "district":"Quận 7",
     "city": "Hồ Chí Minh"
   },
   {
-    "city": "Đà Lạt"
+    "ward": "Phường 1",
+    "district": "Thành phố Đà Lạt",
+    "city": "Lâm Đồng"
+  },
+  {
+    "ward": "Phường 2",
+    "district": "Thành phố Đà Lạt",
+    "city": "Lâm Đồng"
+  },
+  {
+    "ward": "Phường 3",
+    "district": "Thành phố Đà Lạt",
+    "city": "Lâm Đồng"
   }
+  
 ]);

@@ -1,0 +1,54 @@
+[0m10:11:06.328356 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 10:11:06.346376 | 609e71f2-f8a7-45f4-a48f-9297d2a6fe09 ==============================
+[0m10:11:06.346376 [info ] [MainThread]: Running with dbt=1.10.11
+[0m10:11:06.347375 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'partial_parse': 'True', 'quiet': 'False', 'profiles_dir': 'C:\\Users\\huytaq\\.dbt', 'log_path': 'logs', 'invocation_command': 'dbt init', 'write_json': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'target_path': 'None', 'empty': 'None', 'printer_width': '80', 'use_colors': 'True', 'introspect': 'True', 'fail_fast': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'static_parser': 'True', 'debug': 'False', 'version_check': 'True', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m10:11:14.463483 [debug] [MainThread]: Starter project path: D:\location-analytics-suggestions\venv\lib\site-packages\dbt\include\starter_project
+[0m10:11:14.512484 [info ] [MainThread]: 
+Your new dbt project "location_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:11:14.513484 [info ] [MainThread]: Setting up your profile.
+[0m10:11:18.657766 [info ] [MainThread]: No sample profile found for clickhouse.
+[0m10:11:18.659271 [debug] [MainThread]: Command `dbt init` succeeded at 10:11:18.659271 after 12.38 seconds
+[0m10:11:18.659271 [debug] [MainThread]: Flushing usage events
+[0m10:24:42.536121 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 10:24:42.553132 | 0aae2e5a-8e24-4a8e-ad1e-355187b0764c ==============================
+[0m10:24:42.553132 [info ] [MainThread]: Running with dbt=1.10.11
+[0m10:24:42.553132 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'use_experimental_parser': 'False', 'profiles_dir': 'C:\\Users\\huytaq\\.dbt', 'warn_error': 'None', 'log_path': 'logs', 'invocation_command': 'dbt init', 'log_format': 'default', 'write_json': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'target_path': 'None', 'empty': 'None', 'printer_width': '80', 'use_colors': 'True', 'introspect': 'True', 'fail_fast': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'static_parser': 'True', 'debug': 'False', 'version_check': 'True', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m10:25:02.022543 [debug] [MainThread]: Starter project path: D:\location-analytics-suggestions\venv\lib\site-packages\dbt\include\starter_project
+[0m10:25:02.048577 [info ] [MainThread]: 
+Your new dbt project "location_suggestions" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:25:02.049576 [info ] [MainThread]: Setting up your profile.
+[0m10:25:06.598466 [info ] [MainThread]: No sample profile found for clickhouse.
+[0m10:25:06.599468 [debug] [MainThread]: Command `dbt init` succeeded at 10:25:06.599468 after 24.10 seconds
+[0m10:25:06.600471 [debug] [MainThread]: Flushing usage events
