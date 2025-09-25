@@ -1,0 +1,118 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:5.0
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    restart: unless-stopped
+    networks:
+      - location_network
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:23.8
+    container_name: clickhouse
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 262144
+        hard: 262144
+    networks:
+      - location_network
+  
+  # --- CORRECTED TABIX SERVICE ---
+  houseops:
+    image: houseops/houseops
+    container_name: houseops_ui
+    ports:
+      - "8082:8080" # Access HouseOps on localhost:8082
+    depends_on:
+      - clickhouse
+    networks:
+      - location_network
+  # -------------------------------
+
+  metabase:
+    image: metabase/metabase:v0.49.1
+    container_name: metabase
+    ports:
+      - "3000:3000"
+    depends_on:
+      - clickhouse
+    networks:
+      - location_network
+    
+  postgres:
+    image: postgres:13
+    container_name: postgres_airflow
+    environment:
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - POSTGRES_DB=airflow
+    networks:
+      - location_network
+
+  # airflow-init:
+  #   build: .
+  #   depends_on:
+  #     - postgres
+  #   environment:
+  #     - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+  #     - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+  #   command: >
+  #     bash -c "airflow db init && airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com"
+  #   networks:
+  #     - location_network
+
+  # airflow-webserver:
+  #   build: .
+  #   depends_on:
+  #     - airflow-init
+  #     - clickhouse
+  #   ports:
+  #     - "8080:8080"
+  #   restart: always
+  #   environment: &airflow_env
+  #     - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+  #     - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+  #     - AIRFLOW__WEBSERVER__SECRET_KEY=a_super_secret_key_for_webserver_sessions
+  #     - GOOGLE_MAPS_API_KEY=${GOOGLE_MAPS_API_KEY}
+  #     - PYTHONPATH=/opt/airflow
+  #   volumes:
+  #     - ./airflow/dags:/opt/airflow/dags
+  #     - ./airflow/config:/opt/airflow/config
+  #     - ./config:/opt/airflow/pipeline_config
+  #     - ./datapipeline:/opt/airflow/datapipeline
+  #     - ./dbt_project:/opt/airflow/dbt_project
+  #   networks:
+  #     - location_network
+  #   command: airflow webserver
+
+  # airflow-scheduler:
+  #   build: .
+  #   depends_on:
+  #     - airflow-webserver
+  #   restart: always
+  #   environment: *airflow_env
+  #   volumes:
+  #     - ./airflow/dags:/opt/airflow/dags
+  #     - ./airflow/config:/opt/airflow/config
+  #     - ./config:/opt/airflow/pipeline_config
+  #     - ./datapipeline:/opt/airflow/datapipeline
+  #     - ./dbt_project:/opt/airflow/dbt_project
+  #   networks:
+  #     - location_network
+  #   command: airflow scheduler
+
+networks:
+  location_network:
+    driver: bridge
+
+volumes:
+  mongo-data:

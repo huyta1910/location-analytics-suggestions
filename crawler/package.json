@@ -1,0 +1,15 @@
+{
+  "name": "google-map",
+  "version": "1.0.0",
+  "main": "crawl-restaurant.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "mongodb": "^6.20.0",
+    "puppeteer": "^24.22.0"
+  }
+}
