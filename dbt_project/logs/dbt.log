@@ -92,3 +92,43 @@ https://docs.getdbt.com/docs/configure-your-profile
 [0m11:07:46.368709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000127C73020D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000127C972C3D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000127C8705670>]}
 [0m11:07:46.369706 [debug] [MainThread]: Flushing usage events
 [0m11:07:47.555769 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:27:59.578847 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 17:27:59.596042 | d7c88a16-4fff-4ed0-9c08-dc7e52024ee7 ==============================
+[0m17:27:59.596042 [info ] [MainThread]: Running with dbt=1.10.11
+[0m17:27:59.596042 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'empty': 'None', 'log_path': 'd:\\location-analytics-suggestions\\dbt_project\\logs', 'invocation_command': 'dbt ', 'write_json': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'target_path': 'None', 'profiles_dir': 'C:\\Users\\huytaq\\.dbt', 'printer_width': '80', 'use_colors': 'True', 'introspect': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'static_parser': 'True', 'debug': 'False', 'version_check': 'True', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m17:27:59.743743 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m17:27:59.745301 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m17:27:59.746301 [debug] [MainThread]: Command `cli deps` succeeded at 17:27:59.746301 after 0.21 seconds
+[0m17:27:59.746301 [debug] [MainThread]: Flushing usage events
+[0m08:40:11.008032 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 08:40:11.038069 | 9bfa8590-8a1e-439d-9685-c75abed9ef80 ==============================
+[0m08:40:11.038069 [info ] [MainThread]: Running with dbt=1.10.11
+[0m08:40:11.039068 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'use_experimental_parser': 'False', 'no_print': 'None', 'warn_error': 'None', 'log_path': 'd:\\location-analytics-suggestions\\dbt_project\\logs', 'invocation_command': 'dbt ', 'log_format': 'default', 'write_json': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'target_path': 'None', 'profiles_dir': 'C:\\Users\\huytaq\\.dbt', 'printer_width': '80', 'use_colors': 'True', 'introspect': 'True', 'fail_fast': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'static_parser': 'True', 'debug': 'False', 'version_check': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m08:40:11.211566 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m08:40:12.747685 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m08:40:12.776523 [debug] [MainThread]: Command `cli deps` succeeded at 08:40:12.776523 after 1.82 seconds
+[0m08:40:12.776523 [debug] [MainThread]: Flushing usage events
+[0m09:02:45.800545 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 09:02:45.821772 | 3e8d80d9-8bf9-41eb-8183-6d450367e684 ==============================
+[0m09:02:45.821772 [info ] [MainThread]: Running with dbt=1.10.11
+[0m09:02:45.821772 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'C:\\Users\\huytaq\\.dbt', 'warn_error': 'None', 'no_print': 'None', 'use_experimental_parser': 'False', 'log_path': 'd:\\location-analytics-suggestions\\dbt_project\\logs', 'invocation_command': 'dbt ', 'log_format': 'default', 'write_json': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'target_path': 'None', 'empty': 'None', 'printer_width': '80', 'use_colors': 'True', 'introspect': 'True', 'fail_fast': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'static_parser': 'True', 'debug': 'False', 'version_check': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m09:02:45.946275 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m09:02:45.947275 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m09:02:45.949277 [debug] [MainThread]: Command `cli deps` succeeded at 09:02:45.948276 after 0.20 seconds
+[0m09:02:45.949277 [debug] [MainThread]: Flushing usage events
+[0m09:32:05.059819 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 09:32:05.079437 | ecea2909-8b7b-4ea0-9fcd-d823728240e7 ==============================
+[0m09:32:05.079437 [info ] [MainThread]: Running with dbt=1.10.11
+[0m09:32:05.080445 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'no_print': 'None', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\huytaq\\.dbt', 'log_path': 'd:\\location-analytics-suggestions\\dbt_project\\logs', 'invocation_command': 'dbt ', 'log_format': 'default', 'write_json': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'target_path': 'None', 'empty': 'None', 'printer_width': '80', 'use_colors': 'True', 'introspect': 'True', 'fail_fast': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'static_parser': 'True', 'debug': 'False', 'version_check': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m09:32:05.249670 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m09:32:05.250670 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m09:32:05.251672 [debug] [MainThread]: Command `cli deps` succeeded at 09:32:05.251672 after 0.25 seconds
+[0m09:32:05.251672 [debug] [MainThread]: Flushing usage events

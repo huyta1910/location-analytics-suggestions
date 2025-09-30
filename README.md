@@ -25,19 +25,11 @@ This project helps brands identify potential locations to open new branches by a
 - **DBT Support:** Enables advanced data modeling and transformation for analytics.
 
 
-## Workflow
+## System Architecture
 
-```mermaid
-graph TD
-   A[Node.js Crawler] --> B[MongoDB (Raw Data)]
-   B --> C[1. Airflow triggers EL Script (Python)]
-   C --> D[2. Raw data loaded into ClickHouse (Staging Area)]
-   D --> E[3. Airflow triggers dbt]
-   E --> F[dbt transforms data within ClickHouse (Cleaned Models)]
-   F --> G[4. dbt creates final hotspots table in ClickHouse (Analytical Model)]
-   G --> H[5. Metabase reads from ClickHouse]
-   H --> I[Interactive Dashboard & Map]
-```
+![System Architecture](./System-architecture.jpeg)
+
+## Workflow
 
 ## Use Case
 If your brand wants to open a new branch, this project helps you:

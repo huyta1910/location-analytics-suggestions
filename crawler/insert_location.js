@@ -1,4 +1,4 @@
-db.location.insertMany([
+db.places.insertMany([
 // change this suit with your demand
   {
     "ward": "Phạm Văn Đồng",

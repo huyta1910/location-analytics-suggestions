@@ -66,8 +66,8 @@ const keywords = [
 
 
 const conStr = "mongodb://127.0.0.1:27017/";
-const dbName = "crawl_restaurant";
-const collectionName = "location";
+const dbName = "location";
+const collectionName = "places";
 const restaurantCollectionName = "restaurant_drink_beer";
 
 // import necessary modules
