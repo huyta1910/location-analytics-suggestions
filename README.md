@@ -41,7 +41,7 @@ location-analytics-suggestions/
 ├── airflow/           # Airflow configs, DAGs, and plugins
 ├── config/            # Pipeline configuration files
 ├── crawler/           # Node.js scripts for web crawling
-├── datapipeline/      # Python ETL scripts
+├── datapipeline/      # Python ELT scripts
 ├── dbt_project/       # DBT models and configs
 ├── Dockerfile         # Container setup
 ├── docker-compose.yaml# Multi-service orchestration

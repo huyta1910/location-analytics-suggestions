@@ -24,7 +24,7 @@ def extract_and_load(config, source_collection_key, target_table_key):
     df = pd.json_normalize(data)
     print(f"Extracted {len(df)} records.")
 
-    # --- Connect to ClickHouse ---
+    # connect to ClickHouse
     host = config.get('clickhouse', 'host')
     port = config.get('clickhouse', 'port')
     database = config.get('clickhouse', 'database')
@@ -34,7 +34,7 @@ def extract_and_load(config, source_collection_key, target_table_key):
     ch_client = clickhouse_connect.get_client(host=host, port=port)
     print(f"--- Loading to ClickHouse table: {full_table_name} ---")
 
-    # --- NEW, ROBUST DATA CLEANING ---
+
     print("Cleaning DataFrame before insertion...")
     for col in df.columns:
         # Check if a column contains lists, indicating it's an Array type
@@ -48,7 +48,7 @@ def extract_and_load(config, source_collection_key, target_table_key):
             # For string-like columns, fill missing values with an empty string
             df[col] = df[col].fillna('')
     
-    # --- Drop, Create, Insert Logic ---
+    # Drop, Create, Insert Logic
     ch_client.command(f'DROP TABLE IF EXISTS {full_table_name}')
     create_sql = generate_create_table_sql(df, full_table_name)
     ch_client.command(create_sql)
@@ -88,10 +88,8 @@ def run_local_test():
     config.set('clickhouse', 'host', 'localhost')
     
     try:
-        # Call the generic function for locations
         extract_and_load(config, 'location_collection', 'raw_locations_table')
         
-        # Call the generic function for restaurants
         extract_and_load(config, 'restaurant_collection', 'raw_restaurants_table')
         
         print("\n--- LOCAL TEST FINISHED SUCCESSFULLY ---")

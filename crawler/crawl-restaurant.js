@@ -108,7 +108,7 @@ async function deleteLocation(locationId) {
   }
 }
 
-// sleep await func
+// sleep await function
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const crawl_restaurant_drink_beer = async (key, loc) => {
