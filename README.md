@@ -15,7 +15,7 @@
 
 ## Project Overview
 
-This project helps  F&B brands identify potential locations to open new branches by analyzing and visualizing data from various sources. It combines web crawling, data pipelines, and analytics tools to provide actionable insights for expansion decisions.
+This project helps Karaoke F&B brands identify potential locations to open new branches by analyzing and visualizing data from various sources. It combines web crawling, data pipelines, and analytics tools to provide actionable insights for expansion decisions.
 
 ## Features
 - **Web Crawling:** Collects data about restaurants, bars, and entertainment venues from Google Maps using Node.js and Puppeteer.
