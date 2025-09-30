@@ -29,8 +29,6 @@ This project helps Karaoke F&B brands identify potential locations to open new b
 
 ![System Architecture](./System-architecture.jpeg)
 
-## Workflow
-
 ## Use Case
 If your brand wants to open a new branch, this project helps you:
 - Discover high-potential areas based on competitor density and customer reviews.
