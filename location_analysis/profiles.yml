@@ -1,0 +1,14 @@
+location_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      schema: default
+      host: localhost
+      port: 8123
+      user: default
+      password: ""
+      secure: false
+      verify: false
+      database: default
+      threads: 1

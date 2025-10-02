@@ -52,3 +52,30 @@ Happy modeling!
 [0m10:25:06.598466 [info ] [MainThread]: No sample profile found for clickhouse.
 [0m10:25:06.599468 [debug] [MainThread]: Command `dbt init` succeeded at 10:25:06.599468 after 24.10 seconds
 [0m10:25:06.600471 [debug] [MainThread]: Flushing usage events
+[0m14:51:29.403204 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 14:51:29.439044 | cc0840e8-b1e7-4468-9c39-a6c9c63fdc06 ==============================
+[0m14:51:29.439044 [info ] [MainThread]: Running with dbt=1.10.11
+[0m14:51:29.440047 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs', 'invocation_command': 'dbt init location_analysis', 'write_json': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'target_path': 'None', 'empty': 'None', 'printer_width': '80', 'use_colors': 'True', 'introspect': 'True', 'fail_fast': 'False', 'log_cache_events': 'False', 'profiles_dir': 'C:\\Users\\huytaq\\.dbt', 'partial_parse': 'True', 'static_parser': 'True', 'debug': 'False', 'version_check': 'True', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m14:51:29.463280 [debug] [MainThread]: Starter project path: D:\location-analytics-suggestions\venv\lib\site-packages\dbt\include\starter_project
+[0m14:51:29.506274 [info ] [MainThread]: 
+Your new dbt project "location_analysis" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:51:29.506274 [info ] [MainThread]: Setting up your profile.
+[0m14:51:36.611694 [info ] [MainThread]: No sample profile found for clickhouse.
+[0m14:51:36.612694 [debug] [MainThread]: Command `dbt init` succeeded at 14:51:36.611694 after 7.27 seconds
+[0m14:51:36.612694 [debug] [MainThread]: Flushing usage events
